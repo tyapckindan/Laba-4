@@ -43,23 +43,23 @@ namespace student
         }
 
         public static void takeBook(string lastname_in, int count_book) => Console.WriteLine($"{lastname_in} взял {count_book} книги.");
-        public static void takeBook(string lastname_in, string[] name_book)
+        public static void takeBook(string lastname_in, params string[] books)
         {
             Console.Write($"{lastname_in} взял книги:");
-            for (int i = 0; i < name_book.Length; i++)
+            for (int i = 0; i < books.Length; i++)
             {
-                Console.Write($" {name_book[i]}");
+                Console.Write($" {books[i]}");
             }
             Console.Write(".\n");
         }
 
         public static void returnBook(string lastname_in, int count_book) => Console.WriteLine($"{lastname_in} вернул {count_book} книги.");
-        public static void returnBook(string lastname_in, string[] name_book)
+        public static void returnBook(string lastname_in, params string[] books)
         {
             Console.Write($"{lastname_in} вернул книги:");
-            for (int i = 0; i < name_book.Length; i++)
+            for (int i = 0; i < books.Length; i++)
             {
-                Console.Write($" {name_book[i]}");
+                Console.Write($" {books[i]}");
             }
             Console.Write(".\n");
         }
